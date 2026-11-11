@@ -1,6 +1,6 @@
 # Faltas na clínica odontológica
 
-Projeto de portfólio de Thamiris Rodrigues com SQLite, Power BI e DAX. O relatório explora como as faltas variam por turno e especialidade em uma agenda fictícia de outubro de 2026.
+Projeto de portfólio realizado com SQLite, Power BI e DAX. O relatório explora como as faltas variam por turno e especialidade em uma agenda fictícia de outubro de 2026.
 
 ![Prévia dos indicadores e da comparação por turno](previa.png)
 
