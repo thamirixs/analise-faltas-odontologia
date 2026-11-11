@@ -16,6 +16,7 @@ Extraia o ZIP inteiro em uma pasta e abra **Clinica.pbip** no Power BI Desktop c
 
 Execute **analise.sql** em um banco SQLite vazio. O script gera os 100 registros, agrupa por turno e especialidade e conta as faltas em cada grupo. O resultado está em **resumo_agendamentos.csv**. No Power BI, a medida divide a soma das faltas pela soma dos agendamentos no contexto do filtro.
 
+
 ```dax
 Taxa de faltas = DIVIDE([Faltas], [Agendamentos])
 ```
