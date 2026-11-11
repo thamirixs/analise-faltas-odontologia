@@ -20,5 +20,3 @@ Execute **analise.sql** em um banco SQLite vazio. O script gera os 100 registros
 ```dax
 Taxa de faltas = DIVIDE([Faltas], [Agendamentos])
 ```
-
-Para publicar no GitHub, envie o conteúdo extraído mantendo a estrutura de pastas. O README apresenta a prévia diretamente na página do repositório.
