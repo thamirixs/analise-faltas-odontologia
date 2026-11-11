@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "indicador2",
+  "position": {
+    "x": 840,
+    "y": 125,
+    "z": 3,
+    "height": 125,
+    "width": 380,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "resumo_agendamentos"
+                    }
+                  },
+                  "Property": "Taxa de faltas"
+                }
+              },
+              "queryRef": "resumo_agendamentos.Taxa de faltas"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

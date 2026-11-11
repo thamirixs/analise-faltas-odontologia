@@ -1,0 +1,47 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "cabecalho",
+  "position": {
+    "x": 38,
+    "y": 20,
+    "z": 0,
+    "height": 95,
+    "width": 1160,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Faltas na clínica odontológica",
+                    "textStyle": {
+                      "fontSize": "28pt",
+                      "fontWeight": "bold",
+                      "color": "#174C50"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Outubro de 2026  •  Agendamentos fictícios",
+                    "textStyle": {
+                      "fontSize": "13pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

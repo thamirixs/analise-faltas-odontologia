@@ -1,0 +1,66 @@
+{
+  "name": "Clinica",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "pt-BR",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "tables": [
+      {
+        "name": "resumo_agendamentos",
+        "columns": [
+          {
+            "name": "turno",
+            "dataType": "string",
+            "sourceColumn": "turno",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "especialidade",
+            "dataType": "string",
+            "sourceColumn": "especialidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_agendamentos",
+            "dataType": "int64",
+            "sourceColumn": "total_agendamentos",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_faltas",
+            "dataType": "int64",
+            "sourceColumn": "total_faltas",
+            "summarizeBy": "sum"
+          }
+        ],
+        "measures": [
+          {
+            "name": "Agendamentos",
+            "expression": "SUM(resumo_agendamentos[total_agendamentos])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Faltas",
+            "expression": "SUM(resumo_agendamentos[total_faltas])",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Taxa de faltas",
+            "expression": "DIVIDE([Faltas], [Agendamentos])",
+            "formatString": "0.0%"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "resumo_agendamentos",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "#table(type table [turno=text, especialidade=text, total_agendamentos=Int64.Type, total_faltas=Int64.Type], {{\"Manhã\", \"Clínica geral\", 16, 4}, {\"Manhã\", \"Endodontia\", 17, 2}, {\"Manhã\", \"Ortodontia\", 17, 4}, {\"Tarde\", \"Clínica geral\", 17, 3}, {\"Tarde\", \"Endodontia\", 16, 4}, {\"Tarde\", \"Ortodontia\", 17, 3}})"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

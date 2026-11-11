@@ -1,0 +1,58 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "especialidades",
+  "position": {
+    "x": 880,
+    "y": 300,
+    "z": 5,
+    "height": 345,
+    "width": 335,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "resumo_agendamentos"
+                    }
+                  },
+                  "Property": "especialidade"
+                }
+              },
+              "queryRef": "resumo_agendamentos.especialidade"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Filtrar por especialidade'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
